@@ -1,0 +1,24 @@
+{
+    "name": "irap/profiling",
+    "type": "library",
+    "description": "Profiling library for PHP 5.5+",
+    "keywords": ["profiling","library"],
+    "homepage": "http://www.irap.org",
+    "license": "none",
+    "authors": [
+        {
+            "name": "Stuart Page",
+            "email": "stuart.page@irap.org",
+            "homepage": "http://irap.org/",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "iRAP\\Profiling\\": ""
+        }
+    }
+}
