@@ -22,6 +22,13 @@ class LogEvent
         return $this->m_timestamp . ": " . $this->m_message;
     }
     
-    public function getTimestamp() { return $this->m_timestamp; }
-    public function getMessage() { return $this->m_message; }
+    public function getTimestamp() 
+    { 
+        return $this->m_timestamp; 
+    }
+    
+    public function getMessage() 
+    { 
+        return $this->m_message; 
+    }
 }
