@@ -13,7 +13,6 @@ $ git clone https://github.com/iRAP-software/package-profiling.git
 ### Usage
 
 ```
-use iRAP\Profiling\FunctionLog;
 use iRAP\Profiling\FunctionAnalyzer;
 
 function Bar()

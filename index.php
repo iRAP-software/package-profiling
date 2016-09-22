@@ -4,7 +4,6 @@
  * This is an example to demonstrate the usage of the function_analyzer class
  */
 
-use iRAP\Profiling\FunctionLog;
 use iRAP\Profiling\FunctionAnalyzer;
 
 require_once 'vendor/autoload.php';
