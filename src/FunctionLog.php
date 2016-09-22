@@ -33,6 +33,12 @@ class FunctionLog
     }
     
     
-    public function getTotalTime() { return $this->m_totalTime; }
-    public function getName() { return $this->m_functionName; }
+    public function getTotalTime() 
+    { 
+        return $this->m_totalTime; 
+    }
+    
+    public function getName() { 
+        return $this->m_functionName; 
+    }
 }

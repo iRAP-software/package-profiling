@@ -13,8 +13,17 @@ namespace iRAP\Profiling;
 
 class FunctionAnalyzer
 {
-    private static $s_functionStack = array(); # stack of opened functions that havent been closed
-    private static $s_functionLogs = array(); # array of function_log classes.
+    /**
+     * stack of opened functions that havent been closed
+     * @var array
+     */
+    private static $s_functionStack = [];
+
+    /**
+     * array of function_log classes
+     * @var array
+     */
+    private static $s_functionLogs  = [];
     
     
     /**
