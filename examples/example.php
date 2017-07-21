@@ -4,10 +4,7 @@
  * This is an example to demonstrate the usage of the function_analyzer class
  */
 
-namespace iRAP\Profiling;
-
-require_once(__DIR__ . '/FunctionLog.php');
-require_once(__DIR__ . '/FunctionAnalyzer.php');
+require_once(__DIR__ . '/vendor/autoload.php');
 
 function sleeper()
 {
