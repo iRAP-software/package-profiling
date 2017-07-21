@@ -1,15 +1,16 @@
 <?php
 
 /**
- * Class for analyzing how long is spent inside individual functions. Note that this class will 
+ * Class for analyzing how long is spent inside individual functions. Note that this class will
  * NEVER result in a total time exceeding the time it took to execute the entire script. This is
  * becuase when "opening" a nested function, the time is NOT recorded within the parent analyzed
- * parent function. However if a nested function is not "opened" then time spent within that 
+ * parent function. However if a nested function is not "opened" then time spent within that
  * function will be considered as part of the parent.
  *
  */
 
 namespace iRAP\Profiling;
+
 
 class FunctionAnalyzer
 {
@@ -18,7 +19,7 @@ class FunctionAnalyzer
     
     
     /**
-     * Start the "stopwatch" for the specified function 
+     * Start the "stopwatch" for the specified function
      * @param String $name - optionally specify a name for what we are timing. By default we will
      *                       pull the function name from the debug backtrace
      * @return void
@@ -59,7 +60,7 @@ class FunctionAnalyzer
     
     
     /**
-     * Stop the "stopwatch" for the specified function because we have reached the end of the 
+     * Stop the "stopwatch" for the specified function because we have reached the end of the
      * function.
      * @param String $name - optionally specify a name for what we are timing. By default we will
      *                       pull the function name from the debug backtrace
@@ -83,7 +84,7 @@ class FunctionAnalyzer
         
         if (!isset(self::$s_functionLogs[$name]))
         {
-            throw new Exception('Trying to end a function log that hasnt started: ' . $name);
+            throw new \Exception('Trying to end a function log that hasnt started: ' . $name);
         }
         
         self::$s_functionLogs[$name]->close();
@@ -103,7 +104,7 @@ class FunctionAnalyzer
     
     
     /**
-     * Return the results as a string with a line for each 
+     * Return the results as a string with a line for each
      * @param void
      * @return String
      */
@@ -112,8 +113,8 @@ class FunctionAnalyzer
         $results = "";
         
         foreach (self::$s_functionLogs as $functionLog)
-        {            
-            $results .= $functionLog->getName() . ": " . $functionLog->getTotalTime() . ' seconds' . 
+        {
+            $results .= $functionLog->getName() . ": " . $functionLog->getTotalTime() . ' seconds' .
                         PHP_EOL;
         }
         
