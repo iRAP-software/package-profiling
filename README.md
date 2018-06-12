@@ -14,7 +14,7 @@ composer require irap/profiling
 
 Below is an example script that demonstrates using this tool:
 
-```
+```php
 <?php
 
 # Include the autoloader for packages.
@@ -48,7 +48,7 @@ Bar: 3.0002498626709 seconds
 
 Notice that even though `Bar` is called from within `Foo`, so `Foo` takes a total of 4 seconds to execute, the result for `Foo` is just 1 second because the tool is showing how much time was taken up doing logic in `Foo` rather than within `Bar` because `Bar` is already being profiled separately. If you wanted the total time taken within `Foo` **including** `Bar`, then one just needs to take the analyzer calls out of the Bar method:
 
-```
+```php
 <?php
 
 # Include the autoloader for packages.
@@ -82,7 +82,7 @@ Foo: 4.0003681182861 seconds
 
 If you have a very long function, and want to profile separate parts of it, then you can just provide a custom name to the `start` and `stop` methods like so:
 
-```
+```php
 require_once(__DIR__ . '/vendor/autoload.php');
 
 function Bar() { sleep(3); }
