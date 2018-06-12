@@ -1,0 +1,15 @@
+{
+    "require": {
+        "irap/autoloader": "1.0.*",
+        "irap/profiling": "1.0.*",
+        "irap/core-libs": "^1.1"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "rm -rf vendor/irap/profiling && ln -s ../../../ vendor/irap/profiling"
+        ],
+        "post-update-cmd": [
+            "rm -rf vendor/irap/profiling && ln -s ../../../ vendor/irap/profiling"
+        ]
+    }
+}

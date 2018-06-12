@@ -120,4 +120,21 @@ class FunctionAnalyzer
         
         return $results;
     }
+    
+    
+    /**
+     * Get the results in array form (name/duration pairs)
+     * @return array
+     */
+    public static function getResultsArray()
+    {
+        $resultsArray = array();
+        
+        foreach (self::$s_functionLogs as $functionLog)
+        {
+            $resultsArray[$functionLog->getName()] = $functionLog->getTotalTime();
+        }
+        
+        return $resultsArray;
+    }
 }
